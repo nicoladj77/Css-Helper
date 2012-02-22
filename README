@@ -1,4 +1,4 @@
-This is a really basic helper class that takes an associative arrays as a constructor parameter and then parses the files contained in the css directory replacing the the keys with the values. 
+This is a really basic helper class that takes an associative arrays as a constructor parameter and then parses the files contained in the "/css" directory replacing the keys with the values. 
 
 Basic use. 
 
