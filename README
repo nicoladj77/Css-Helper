@@ -1,0 +1,32 @@
+This is a really basic helper class that takes an associative arrays as a constructor parameter and then parses the files contained in the css directory replacing the the keys with the values. 
+
+Basic use. 
+
+Let's say whe have a style.css file in the "css/" directory which holds the following code
+
+html, body{
+	color:{textColor};
+	background-color:{backgroundColor};
+}
+
+//This preloads and convert all files that are found in the "css/" directory
+//you can change this parameter by changing the $cssDir private variable
+$css = new Css(array("{textColor}" => "black", "{backgroundColor}" => "white"));
+//This recreates the previously loaded and converted file files in the $outCssDir directory 
+$css->renderToFile();
+
+//we have a file called style.css in the directory ../css that holds the following code:
+html, body{
+	color:black;
+	background-color:white;
+}
+//this just echoes a <style> block
+$css->render();
+
+//the following element is rendered
+<style>
+html, body{
+	color:black;
+	background-color:white;
+}
+</style>
