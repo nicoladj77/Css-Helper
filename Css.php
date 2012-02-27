@@ -51,8 +51,8 @@ class Css {
 	 */
 	public function render() {
 		$css = "<style>\n";
-		for ($i = 0; $i < count($this -> cssFiles); $i++) {
-			$css .= $this -> cssFiles[$i];
+		foreach ($this -> cssFiles as $fileContent) {
+			$css .= $fileContent;
 		}
 		$css .= "</style>";
 		echo($css);
